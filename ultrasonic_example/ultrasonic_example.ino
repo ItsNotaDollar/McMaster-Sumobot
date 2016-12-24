@@ -1,5 +1,3 @@
-//todo: use something like javadoc for describing methods?
-
 #include <Ultrasonic.h> // This type of import is used for using libraries that have been imported to the
                         // arduino library. This is the recomended way since you don't have to have the
                         // source files in your project.

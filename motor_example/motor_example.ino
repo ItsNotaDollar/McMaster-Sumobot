@@ -1,4 +1,3 @@
-//todo: use something like javadoc for describing functions?
 
 // Assigning out pins as constants. On the Arduino Uno, pins 3 and 5 are Pwm so that we can specify a
 // range of values to control the speed of the motor. If you do not want to have control over motor

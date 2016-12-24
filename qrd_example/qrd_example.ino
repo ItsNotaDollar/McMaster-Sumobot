@@ -1,4 +1,3 @@
-//todo: use something like javadoc for describing functions?
 
 // Use if the value doesn't change (pins, calibrated values, etc) declare them as constants!
 const unsigned int QrdPin = A0; // The pin that the Qrd sensor is connected to
