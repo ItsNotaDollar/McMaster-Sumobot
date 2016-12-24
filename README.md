@@ -1,45 +1,13 @@
 #**McMaster Sumobot - Junior Competition Resources**
-Welcome to the homepage of all the McMaster Sumobot sample code for Junior competitors! You'll be able to find examples for basic motor movement, sensor reading, and some past competitors code!!!
+Welcome to the homepage of the McMaster Sumobot sample code for Junior competitors! The projects are broken down into sections that introduce you to coding in the Arduino language, as well as going through the basic design stages for implementing your code.
 
-###Basics of arduino code
-To give a quick outline of how arduino code works, it is split into 2 main parts.
-- Set up
-- The loop
-
-####The Set Up
-The `setup()` function allows you to do "one time" set up before entering the loop. This is where you want to set up your pins as inputs or outputs, do any sensor calibration, set up serial monitoring, and where you need to put your wait statement (as per competition rules). Here is a basic outline of what your setup() should look like:
-```
-void setup() {
-  // pinMode declarations
-  pinMode(A0, INPUT); // Analog input
-  pinMode(4, OUTPUT); // Digital output
-  
-  // Anything else you might like to do here
-  
-  // Set up a serial port to monitor whats going on
-  Serial.begin(9600);
-  
-  // wait 5 seconds
-  delay(5000); // Waits for 5000ms and then continues
-{
-```
-
-###The Loop
-The `loop()` function is where all of your logic should take place. This where you can read sensor data, change direction, etc. This function will loop indefinitely until the power in the arduino is turned off.
-
-Here is a simple example of a basic state-machine in an `loop()`
-
-```
-void loop() {
-  QrdValue = analogRead(QrdPin);
-  if (QrdValue > QRD_THRESHOLD) {
-    // White line detected!!!!
-    moveBackwards();
-  } else {
-    // Not at the edge
-    moveForwards();
-  }
-}
-```
-
-Take a look at sample code in the `Examples` folder! There are basic state-machines, QRD calibration examples, and motor testing code all included with the project!
+###Examples
+The below examples are designed to give you an intro to the arduino language, as well as provide a generic skeleton for your fully implemented code.
+1. [The Basics - Qrds](https://github.com/bcorbold/McMaster-Sumobot/tree/master/qrd_example)
+  - Covers the absolute basics of Arduino. Code structure, pin assignments, and serial printing
+2. [Arduino Methods - Motors](https://github.com/bcorbold/McMaster-Sumobot/tree/master/motor_example)
+  - Builds on the basics and introduces you to writing functions, and the types of pins on the Arduino Uno
+3. [Libraries & Headers - Ultrasonic Sensors](https://github.com/bcorbold/McMaster-Sumobot/tree/master/ultrasonic_example)
+  - Shows you how to use external libraries in an Arduino project
+4. [Statemachine - Generic Outline](https://github.com/bcorbold/McMaster-Sumobot/tree/master/state_machine_example)
+  - Focus on writing your own C++ class (Arduino Library) that you can then use in your project

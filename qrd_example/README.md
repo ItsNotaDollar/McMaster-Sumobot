@@ -1,24 +1,14 @@
-#**McMaster Sumobot - QRD Example**
-This project contains some sample could that is useful for calibrating the QRD sensors supplied with the Junior Starter Package.
+#**The Basics - Qrds**
+This project will go through the absolute basics of the Arduino language and how an Arduino program is structured. It will also show you how to read values from your Qrds.
 
-###The Code
-When you are using the code, make sure that you adjust the `QrdPin` to the pin in which you are plugging your sensor to. Each QRD sensor should be calibrated to find where the `QrdThreshold` value is. The QRD sensors read a value from 0 to 255, you'll need to find which is the best value to decide when it is detecting white, or black.
-
-The serial monitor will allow you to see the values being ready ever second. Use this to decide what value you want for your full implementation.
+###Code Preview
+In order to start this project you will have to have created at least one working QRD circuit that you can connect to your Arduino Uno. When you are running this program, make sure that you adjust the `QrdPin` to which ever pin you have your QRD connected sensor to. Each QRD sensor should be calibrated to find where the `QrdThreshold` value is. The QRD sensors read a 10-bit value (0 to 1023), you'll need to find which is the best value to decide when it is detecting white, or black.
 ```
-/********************************************************************/
-/*                     QRD Calibration Example                      */
-/********************************************************************/
-
-const unsigned int QrdPin = A0;
-const unsigned int QrdThreshold = 100;
-
-// where the sensor value will be stored
-unsigned int QrdValue;
-
 void setup() {
   pinMode(QrdPin, INPUT);
+
   Serial.begin(9600);
+
   Serial.println("+-------------------------------------------+");
   Serial.println("|            QRD Sensor Readings            |");
   Serial.println("+-------------------------------------------+");
@@ -26,13 +16,22 @@ void setup() {
 
 void loop() {
   QrdValue = analogRead(QrdPin);
+
   Serial.println("Qrd is reading a value of : " + QrdValue);
   if (QrdValue < QrdThreshold) {
-    Serial.println("Qrd is reading white!!!");
+      Serial.println("Qrd is reading white!!!");
     } else {
-      Serial.println("Qrd is reading black!!!");
+      Serial.print("Qrd is reading black!!!");
+      Serial.print("\n");
     }
   Serial.println("---------------------------------------------");
-  delay(1000); // Wait one second before next loop iteration starts
+
+  delay(1000);
 }
 ```
+
+###Additional Resources
+- [Arduino Docs](https://www.arduino.cc/en/Reference/HomePage)
+- [Arduino Foundations](https://www.arduino.cc/en/Tutorial/Foundations)
+- [How QRDs Work]()
+- [QRD1114 Datasheet]()

@@ -1,0 +1,26 @@
+-> Finish all of the tutorials
+  -> Add in links to appropriate Arduino documentation where needed in actual ino files
+
+-> Restructure the README formats
+  -> Main Title
+    -> P1 : What does this teach you Arduino wise
+    -> P2 : What does this teach you Sumobot wise
+  -> SubTitle : The Code
+    -> P2 : Notes about project/configuration
+    -> Code Snipet
+      -> Just setup() and loop()
+      -> No comments in preview file
+  -> SubTitle : Resources
+    -> Add in links to associated Arduino documentation to match what is provided in the examples
+
+-> Restructure the main README file
+  -> Main Title
+    -> P1 : Brief intro
+  -> SubTitle : Examples
+    -> P1 : Explanation of what the examples are/aim to do
+    -> OrderedList
+      -> List of all the examples with direct links to their projects
+  -> SubTitle : Contact Info
+    -> P1 : Thanks blah blah blah, here is contact info
+      -> Include contact info for myself
+      -> Include link to sumobot.ca
