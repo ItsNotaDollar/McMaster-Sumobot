@@ -30,6 +30,7 @@ Range cmToEnum(int distance) {
 ```
 
 ###Additional Resources
-- [Ultrasonic Library](http://tutorial.cytron.com.my/2012/10/11/testing-ultrasonic-ranging-module-sn-hc-sr04/)
+- [Ultrasonic Library](http://tutorial.cytron.com.my/wp-content/uploads/2012/10/HC_SR4_Demo_Arduino.zip)
+- [Ultrasonic Tutorial](http://tutorial.cytron.com.my/2012/10/11/testing-ultrasonic-ranging-module-sn-hc-sr04/)
 - [Installing Libraries in Arduino](https://www.arduino.cc/en/Guide/Libraries)
 - [Why use header files?](http://www.cplusplus.com/forum/articles/10627/)
